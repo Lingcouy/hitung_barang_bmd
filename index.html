@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="BETO_ITDAPROV">
+    
+    <title>Aplikasi Perhitungan Barang</title>
+
+    <link rel="icon" type="image/png" href="asset/img/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Perhitungan Barang</h1>
+        <form id="formPerhitungan">
+            <!-- Input untuk volume barang -->
+            <label for="volume">Volume (item):</label>
+            <input type="text" id="volume" name="volume" required placeholder="Masukkan volume">
+
+            <!-- Input untuk harga satuan -->
+            <label for="hargaSatuan">Harga Satuan (Rp):</label>
+            <input type="text" id="hargaSatuan" name="hargaSatuan" required placeholder="Masukkan harga satuan">
+
+            <!-- Input untuk harga kotor yang otomatis terhitung -->
+            <label for="hargaKotor">Harga Kotor (Rp):</label>
+            <input type="text" id="hargaKotor" name="hargaKotor" readonly placeholder="Harga kotor otomatis">
+
+            <!-- Input untuk PPN -->
+            <label for="ppn">PPN (Rp):</label>
+            <input type="text" id="ppn" name="ppn" required placeholder="Masukkan nilai PPN">
+
+            <!-- Input untuk PPh -->
+            <label for="pph">PPh (Rp):</label>
+            <input type="text" id="pph" name="pph" required placeholder="Masukkan nilai PPh">
+
+            <!-- Input untuk harga bersih yang otomatis terhitung -->
+            <label for="hargaBersih">Harga Bersih (Rp):</label>
+            <input type="text" id="hargaBersih" name="hargaBersih" readonly placeholder="Harga bersih otomatis">
+
+            <!-- Tombol untuk menghitung harga satuan yang disesuaikan -->
+            <button type="button" onclick="hitungHargaSatuanDisesuaikan()">Hitung Harga Satuan yang Diinput</button>
+        </form>
+        
+        <!-- Bagian untuk menampilkan hasil perhitungan -->
+        <div id="hasilContainer">
+            <div id="hasil"></div>
+        </div>
+    </div>
+
+    <!-- Menyertakan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
